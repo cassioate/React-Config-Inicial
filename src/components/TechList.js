@@ -28,13 +28,25 @@ class TechList extends Component {
         )
     }
 
+    handleRemove = tech => {
+        this.setState(
+            { 
+                techs: this.state.techs.filter(t => t !== tech) 
+            }
+        )
+    }
+
     render() {
        return (
         <>  
             <h1>{this.state.newTech}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <ul>
-                        {this.state.techs.map(tech => <li key={tech}>{tech}</li>)}
+                        {this.state.techs.map(tech => 
+                        <li key={tech}>
+                            {tech}
+                            <button type="button" onClick={ () => this.handleRemove(tech) }> Remover</button>
+                        </li>)}
                     </ul>
                     <input 
                     type="text" 
