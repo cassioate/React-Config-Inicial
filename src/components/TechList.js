@@ -5,9 +5,15 @@ class TechList extends Component {
 /**
  * Forma de definir valores default para as variaveis em uma Classe
  */
-    static defaultProps = {
-        tech: "Outros"
-    }
+    // static defaultProps = {
+    //     tech: "Outros"
+    // }
+
+    // static propTypes = {
+    //     tech: PropTypes.string.isRequired,
+    //     onDelete: PropTypes.func.isRequired
+    // }
+
 
     state = {
         newTech: '',
