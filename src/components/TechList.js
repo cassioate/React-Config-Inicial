@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 import TechItem from './TechItem'
 class TechList extends Component {
 
+/**
+ * Forma de definir valores default para as variaveis em uma Classe
+ */
+    static defaultProps = {
+        tech: "Outros"
+    }
+
     state = {
         newTech: '',
         techs: [

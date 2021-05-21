@@ -9,4 +9,11 @@ function TechItem({tech, onDelete}) {
     )
 }
 
+/**
+ * Forma de definir valores default para as variaveis em uma function
+ */
+TechItem.defaultProps = {
+    tech: 'Oculto'
+}
+
 export default TechItem
